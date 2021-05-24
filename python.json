@@ -1,0 +1,144 @@
+{
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Debugging a single variable": {
+		"prefix": "debug",
+		"body": [
+			"print('\\n\\n$1: ', $1, '\\n\\n')",
+			"$2",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging a single variable (PURPLE)": {
+		"prefix": "purple_debug",
+		"body": [
+			"print('\\033[95m\\n\\n$1: ', $1, '\\n\\n\\033[0m')",
+			"$2",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging a single variable (BLUE)": {
+		"prefix": "blue_debug",
+		"body": [
+			"print('\\033[94m\\n\\n$1: ', $1, '\\n\\n\\033[0m')",
+			"$2",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging a single variable (CYAN)": {
+		"prefix": "cyan_debug",
+		"body": [
+			"print('\\033[96m\\n\\n$1: ', $1, '\\n\\n\\033[0m')",
+			"$2",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging a single variable (GREEN)": {
+		"prefix": "green_debug",
+		"body": [
+			"print('\\033[92m\\n\\n$1: ', $1, '\\n\\n\\033[0m')",
+			"$2",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging a single variable (YELOW)": {
+		"prefix": "yellow_debug",
+		"body": [
+			"print('\\033[93m\\n\\n$1: ', $1, '\\n\\n\\033[0m')",
+			"$2",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging a single variable (RED)": {
+		"prefix": "red_debug",
+		"body": [
+			"print('\\033[91m\\n\\n$1: ', $1, '\\n\\n\\033[0m')",
+			"$2",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging a single variable and exit()": {
+		"prefix": "die",
+		"body": [
+			"print('\\033[91m\\n\\n$1: ', $1, '\\n\\n\\033[0m')",
+			"exit()",
+		],
+		"description": "Log output to console"
+	},
+	"Debugging time Start": {
+		"prefix": "begin",
+		"body": [
+			"from time import time",
+			"begin_time = time()",
+		],
+		"description": "Start the time count"
+	},
+	"Debugging time End": {
+		"prefix": "end_time",
+		"body": [
+			"print('\\033[92m\\n\\ntime_$1_final: ', time()-begin_time, '\\n\\n\\033[0m')",
+		],
+		"description": "Start the time count"
+	},
+	"Mock Object": {
+		"prefix": "mock_obj",
+		"body": [
+			"with mock.patch.object(",
+			"    ${1:object to mock},",
+			"    \"${2:Function_To_Mock}\",",
+			"    return_value=${3:Expected Return Value},",
+			"):",
+			"    ${0:pass}",
+		],
+		"description": "Start the time count"
+	},
+	"Mock Patch": {
+		"prefix": "mock_patch",
+		"body": [
+			"with mock.patch(",
+			"    \"${1:Path to method}\",",
+			"    return_value=${2:None}",
+			"):",
+			"    $0",
+		],
+		"description": "Start the time count"
+	},
+	"Mock Object Loop": {
+		"prefix": "mock_obj_loop",
+		"body": [
+			"with mock.patch.object(",
+			"    ${1:object to mock},",
+			"    \"${2:Function_To_Mock}\",",
+			"    side_effect=${3:Expected Return Value},",
+			"):",
+			"    ${0:pass}",
+		],
+		"description": "Start the time count"
+	},
+	"Mock Patch Loop": {
+		"prefix": "mock_patch_loop",
+		"body": [
+			"with mock.patch(",
+			"    \"${1:Path to method}\",",
+			"    side_effect=${2:None}",
+			"):",
+			"    $0",
+		],
+		"description": "Start the time count"
+	},
+}
+/* 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+*/
