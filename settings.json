@@ -1,33 +1,19 @@
-/* PLACE IT ON .vscode ROOT DIRECTORY */
+/* SAVE IT ON ~/.config/Code/User/settings.json */
 {
     "editor.formatOnSave": true,
     "python.pythonPath": "venv/bin/python",
-    "python.formatting.blackArgs": [
-        "--line-length=105"
-    ],
-    "python.sortImports.args": [
-        "-rc",
-        "--atomic"
-    ],
-    "[python]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
+    "git.autofetch": true,
+    "plantuml.diagramsRoot": "docs/diagrams/src",
+    "plantuml.exportOutDir": "docs/diagrams/out",
+    "files.associations": {
+        "*.pu": "plantuml"
     },
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.autoComplete.extraPaths": [
-        "~/.local/lib/Google/google_appengine",
-        "~/.local/lib/Google/google_appengine/lib/flask-0.12"
-    ],
-    "python.testing.pytestArgs": [
-        "."
-    ],
-    "python.testing.unittestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "python.analysis.extraPaths": [
-        "~/.local/lib/Google/google_appengine",
-        "~/.local/lib/Google/google_appengine/lib/flask-0.12"
-    ]
+    "plantuml.exportFormat": "svg",
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.server": "https://www.plantuml.com/plantuml",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorCustomizations": {
+        "editorUnnecessaryCode.border": "#ff0000",
+        "editorUnnecessaryCode.opacity": "#ff000025"
+    },
 }
