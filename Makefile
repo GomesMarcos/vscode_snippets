@@ -67,7 +67,7 @@ solve_conflict_current_branch: guard-destiny
 test_verbose_with_print:
 	pytest -svv tests/
 
-undo_last_commit: guard-qtd
+undo_last_commit:
 	git reset HEAD~1
 
 view_commits_current_branch:
