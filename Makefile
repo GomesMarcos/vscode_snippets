@@ -45,9 +45,8 @@ install:
 install_dev:
 	pip install -r requirements_dev.txt
 
-kill_flask:
-	# Caso dê erro de porta já sendo usada, rode este comando.
-	lsof -t -i tcp:5000 | xargs kill -9 
+kill_port: guard-port
+	lsof -t -i tcp:${port} | xargs kill -9 
 
 commit: guard-text
 	git add . && git reset run.py && git commit -m"${text}"
