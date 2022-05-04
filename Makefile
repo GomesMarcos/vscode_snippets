@@ -2,6 +2,16 @@
 # Author: Marcos Gomes
 # GitHub: https://github.com/GomesMarcos/
 
+VENV=.venv
+VENV_ACTIVATE=. $(VENV)/bin/activate
+
+# run $ make on terminal to install and see the magic.
+$(VENV):
+	python -m venv $(VENV)
+	$(VENV_ACTIVATE);
+	make install;
+
+
 guard-%:
 	@ if [ "${${*}}" = "" ]; then \
 		echo "the variable \"$*\" is required."; \
@@ -10,6 +20,9 @@ guard-%:
 
 clean:
 	find . -type d -name __pycache__ -exec rm -r {} \+ && find . -type d -name .pytest_cache -exec rm -r {} \+
+
+clean_all: clean
+	rm -rf $(VENV)
 
 collect_tests:
 	pytest --collect-only
